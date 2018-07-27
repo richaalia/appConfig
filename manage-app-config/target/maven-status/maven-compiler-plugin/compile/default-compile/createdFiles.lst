@@ -1,0 +1,6 @@
+com\appConfig\Service\ConfigRepository.class
+com\appConfig\model\AppConfigIdentity.class
+com\appConfig\Service\ConfigService.class
+com\appConfig\model\AppConfig.class
+com\appConfig\springappConfig\AppConfigController.class
+com\appConfig\springappConfig\SpringBootAppConfig.class
