@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: manage-app-config
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: ADMIN
+Implementation-Vendor-Id: com.sppConfig.springappConfig
+Build-Jdk: 1.8.0_151
+Implementation-URL: http://projects.spring.io/spring-boot/manage-app-c
+ onfig/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "appconfig")
+@Table(name = "app_config")
 public class AppConfig {
 	
 	@EmbeddedId

@@ -16,7 +16,7 @@ public class ConfigService {
 
 	public void addAppConfigForVersion(AppConfig appConfig) {
 		
-		 configRepository.save(appConfig);
+		configRepository.save(appConfig);
 		
 	}
 
