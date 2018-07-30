@@ -28,7 +28,7 @@ public class AppConfigController {
 		this.configService = configService;
 	}
 
-	@RequestMapping(value = "/{appCode}/config/{version}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{appCode}/config/{version}", method = RequestMethod.GET, produces= MediaType.APPLICATION_JSON_VALUE )
 	@ResponseBody
 	public List<AppConfig> getAppConfigForVersion(@PathVariable String appCode, @PathVariable String version) {
 
@@ -36,7 +36,7 @@ public class AppConfigController {
 
 	}
 
-	@RequestMapping(value = "/{appCode}/config", method = RequestMethod.GET)
+	@RequestMapping(value = "/{appCode}/config", method = RequestMethod.GET, produces= MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public List getAppConfigForApp(@PathVariable String appCode) {
 
@@ -53,10 +53,10 @@ public class AppConfigController {
 			@PathVariable String version) {
 		if (appConfig == null)
 			return ResponseEntity.noContent().build();
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path(
-				"/{appCode}").buildAndExpand(appConfig.getAppConfigIdentity().getAppCode()).toUri();
-		configService.addAppConfigForVersion(appConfig, appCode, version);
-		return ResponseEntity.created(location).build();
+	
+		String status = configService.addAppConfigForVersion(appConfig, appCode, version);
+		return ResponseEntity.ok().build();
+				
 
 	}
 }
