@@ -10,14 +10,38 @@ import javax.persistence.Table;
 @Table(name = "app_config")
 public class AppConfig {
 	
+	/*Creating just one table to store the app config for test purpose, but in real life it would be a good idea to 
+	store app code and version in a separate table and maintain the properties in a different table. In a nut shell this table is not normalised.
+	I am Using composite primary key here which is app code and version */
+	
 	@EmbeddedId
     private AppConfigIdentity appConfigIdentity;
 	
+	
+	public AppConfigIdentity getAppConfigIdentity() {
+		return appConfigIdentity;
+	}
+
+
+
+
+
+	public void setAppConfigIdentity(AppConfigIdentity appConfigIdentity) {
+		this.appConfigIdentity = appConfigIdentity;
+	}
+
+
+
+
+
 	public AppConfig() {
 
 	}
 
 	
+	
+
+
 	public AppConfig(AppConfigIdentity appConfigIdentity, String dbURL, String dbUserName, String dbPassword,
 			String appURL) {
 		super();

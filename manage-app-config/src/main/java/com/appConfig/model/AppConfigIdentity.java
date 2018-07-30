@@ -9,7 +9,9 @@ import java.io.Serializable;
 @Embeddable
 public class AppConfigIdentity implements Serializable{
 	
+	@NotNull
 	private String version;
+	@NotNull
 	private String appCode;
 	public String getVersion() {
 		return version;
@@ -27,7 +29,7 @@ public class AppConfigIdentity implements Serializable{
 		
 		}
 	public AppConfigIdentity(String version, String appCode) {
-		super();
+		
 		this.version = version;
 		this.appCode = appCode;
 	}
